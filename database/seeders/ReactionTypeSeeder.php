@@ -13,14 +13,24 @@ class ReactionTypeSeeder extends Seeder
      */
     public function run(): void
     {
-        ReactionType::create([
+        ReactionType::firstOrCreate([
             'name' => 'Love',
             'icon' => '♥️',
         ]);
 
-        ReactionType::create([
+        ReactionType::firstOrCreate([
             'name' => 'Like',
             'icon' => '👍',
+        ]);
+
+        ReactionType::firstOrCreate([
+            'name' => 'Dislike',
+            'icon' => '👎',
+        ]);
+
+        ReactionType::firstOrCreate([
+            'name' => 'Upset',
+            'icon' => '😠',
         ]);
     }
 }
