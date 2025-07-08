@@ -22,7 +22,7 @@ class StoreSiteRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'url' => 'required|url',
+            'url' => 'required|url|unique:sites,url',
             'reaction_types' => 'array|required',
         ];
     }

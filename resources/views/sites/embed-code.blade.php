@@ -1,5 +1,15 @@
 <div>
     <div>
+        <label for="admin-url" class="block text-sm/6 font-medium text-gray-900">Save this URL somewhere safe, it's the
+            secret admin area for your ReactBar!</label>
+        <div class="mt-2">
+            <input type="url" name="admin-url" id="admin-url"
+                value="{{ route('sites.show', ['site' => $site, 'admin_slug' => $site->admin_slug]) }}"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+        </div>
+    </div>
+
+    <div class="mt-6">
         <label for="embed-code" class="block text-sm/6 font-medium text-gray-900">Paste this embed code into your
             HTML:</label>
         <div class="mt-2">
@@ -16,6 +26,7 @@
         onclick="copyEmbedCode()">
         Copy Code
     </button>
+
     <script>
         function copyEmbedCode() {
             const textarea = document.getElementById('embed-code');

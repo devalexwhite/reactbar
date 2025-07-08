@@ -13,16 +13,15 @@
         <p for="url" class="block text-sm/6 font-medium text-gray-900">Which reactions should be available?</p>
 
         <div class="flex flex-wrap gap-x-6 gap-y-2 flex-row">
-            @foreach (\App\Models\ReactionType::all() as $reactionType)
-                <div class="mt-2">
-                    <label class="inline-flex items-center">
-                        <input type="checkbox" name="reaction_types[]" checked value="{{ $reactionType->id }}"
-                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                        <span class="ml-1 text-sm/6 text-gray-900">{{ $reactionType->icon }}
-                            {{ $reactionType->name }}</span>
+
+            <div class="flex flex-wrap gap-4">
+                @foreach (\App\Models\ReactionType::all() as $reactionType)
+                    <label class="flex items-center gap-2 bg-white px-3 py-2 rounded shadow-sm border border-gray-200">
+                        <input type="checkbox" name="reaction_types[]" value="{{ $reactionType->id }}" checked>
+                        <span>{{ $reactionType->icon }} {{ $reactionType->name }}</span>
                     </label>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 

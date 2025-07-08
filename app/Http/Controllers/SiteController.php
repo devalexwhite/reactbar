@@ -37,10 +37,8 @@ class SiteController extends Controller
         $siteSlugHash = uniqid($domain);
         $siteAdminHash = uniqid($domain);
 
-        $site = Site::firstOrCreate([
+        $site = Site::create([
             'url' => $validated['url'],
-
-        ], [
             'slug' => $siteSlugHash,
             'admin_slug' => $siteAdminHash,
         ]);
