@@ -1,5 +1,5 @@
 <x-layout>
-    <main class="max-w-5xl mx-auto px-8 py-3 my-16 min-h-screen">
+    <main class="max-w-5xl mx-auto px-4 py-3 my-16 min-h-screen">
         <header class="text-center max-w-2xl mx-auto">
             <h1 class="font-bold text-gray-800 leading-14 text-5xl">Let people
                 <span class="bg-yellow-200 px-3 relative mr-2">
