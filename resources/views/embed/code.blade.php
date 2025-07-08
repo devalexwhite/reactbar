@@ -1,1 +1,1 @@
-<script defer src="https://reactbar.thatalexguy.dev/embed/script.js" data-slug="{{ $site->slug }}" />
+<script defer src="https://reactbar.thatalexguy.dev/embed/script.js" data-slug="{{ $site->slug }}"></script>
