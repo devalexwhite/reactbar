@@ -14,7 +14,7 @@
 
         <div class="mt-16 mb-8">
 
-            @include('embed.bar', ['site' => \App\Models\Site::where('slug', 'reactbar')->first()])
+            <script src="/embed/script.js" data-slug="reactbar" defer></script>
 
         </div>
 
@@ -28,6 +28,82 @@
                 </div>
             </div>
         </div>
+
+        <section class="mt-16">
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-gray-800 text-3xl font-bold mb-4">Got questions?</h3>
+                <p class="text-gray-700 mb-4">
+                    I've got (some) answers!
+                </p>
+                <div class="flex flex-col gap-2">
+                    <details>
+                        <summary>
+                            <span class="text-gray-700 text-lg font-medium">Is it really free?</span>
+                        </summary>
+                        <p class="text-gray-700 mb-4">
+                            You know it! There's enough subscription garbage in the world, so I built this as a free
+                            tool
+                            to support the small web.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <span class="text-gray-700 text-lg font-medium">Do you track anything?</span>
+                        </summary>
+                        <p class="text-gray-700 mb-4">
+                            Nothing identifiable. When someone submits a reaction, the service stores a hash of their IP
+                            address,
+                            the
+                            current date and the reaction ID. This allows the service to prevent someone from spamming
+                            the "Like"
+                            button. If ReactBar's database was hacked, the hashes would be meaningless. Beyond that, the
+                            service
+                            does not
+                            store
+                            any user details.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <span class="text-gray-700 text-lg font-medium">Do I need a seperate embed code for each
+                                page?</span>
+                        </summary>
+                        <p class="text-gray-700 mb-4">
+                            At the moment, yes. Each embed code is tied to a specific URL. If you want to collect
+                            reactions
+                            for multiple pages, you will need to create a new embed code for each page.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <span class="text-gray-700 text-lg font-medium">Why did you build this?</span>
+                        </summary>
+                        <p class="text-gray-700 mb-4">
+                            I wanted to add reactions to my <a href="https://thatalexguy.dev"
+                                class="underline text-blue-700" target="_blank">blog</a> in a simple way. So I did what
+                            any
+                            developer would
+                            when faced with a simple task,
+                            and built an entire service around it...
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <span class="text-gray-700 text-lg font-medium">I wanna chat!</span>
+                        </summary>
+                        <p class="text-gray-700 mb-4">
+                            Awesome! You can email me at <a href="mailto:alex.white@hey.com"
+                                class="underline text-blue-700">alex.white@hey.com</a>!
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+        </section>
     </main>
     <footer class="text-center text-gray-500 text-sm my-8 ">
         <p>An <a href="https://thatalexguy.dev" class="text-gray-700 hover:underline" target="_blank">Alex White</a>
