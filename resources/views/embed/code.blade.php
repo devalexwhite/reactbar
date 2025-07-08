@@ -1,1 +1,1 @@
-<script defer src="https://reactbar.thatalexguy.dev/embed/script.js" data-slug="{{ $site->slug }}"></script>
+<script defer src="https://reactbar.thatalexguy.dev/embed/script.js" data-slug="{{ $site->slug }}" {{ app()->environment() != 'production' ? 'data-url=http://localhost:8000' : '' }}></script>

@@ -23,6 +23,7 @@ class StoreSiteRequest extends FormRequest
     {
         return [
             'url' => 'required|url',
+            'reaction_types' => 'array|required',
         ];
     }
 }

@@ -23,8 +23,8 @@ class ReactionBarController extends Controller
     public function react(Request $request, $slug)
     {
         $reactionTypeId = $request->input('reaction_type_id');
-        $reactionType = ReactionType::findOrFail($reactionTypeId);
         $site = Site::where('slug', $slug)->firstOrFail();
+        $reactionType = $site->reactionTypes()->findOrFail($reactionTypeId);
 
 
         $ipDateHash = SiteReaction::hashUserIP($request->ip());

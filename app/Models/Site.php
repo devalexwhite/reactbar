@@ -22,6 +22,11 @@ class Site extends Model
         return $this->hasMany(SiteReaction::class);
     }
 
+    public function reactionTypes()
+    {
+        return $this->belongsToMany(ReactionType::class, 'site_reaction_type');
+    }
+
     public function getReactionCounts()
     {
         return $this->reactions()

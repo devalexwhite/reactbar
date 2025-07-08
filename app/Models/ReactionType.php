@@ -10,4 +10,9 @@ class ReactionType extends Model
         'name',
         'icon',
     ];
+
+    public function sites()
+    {
+        return $this->belongsToMany(Site::class, 'site_reaction_type');
+    }
 }

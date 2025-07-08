@@ -110,7 +110,7 @@
 
 @php
     use App\Models\ReactionType;
-    $reactionTypes = ReactionType::all();
+    $reactionTypes = $site->reactionTypes()->get();
     $siteReactionCounts = $site->getReactionCounts();
 @endphp
 

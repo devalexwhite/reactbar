@@ -32,5 +32,30 @@ class ReactionTypeSeeder extends Seeder
             'name' => 'Upset',
             'icon' => '😠',
         ]);
+
+        ReactionType::firstOrCreate([
+            'name' => 'Upset',
+            'icon' => '😠',
+        ]);
+
+        ReactionType::firstOrCreate([
+            'name' => 'Support',
+            'icon' => '🤗',
+        ]);
+
+        ReactionType::firstOrCreate([
+            'name' => 'Celebrate',
+            'icon' => '👏',
+        ]);
+
+        ReactionType::firstOrCreate([
+            'name' => 'Confused',
+            'icon' => '😕',
+        ]);
+
+        ReactionType::firstOrCreate([
+            'name' => 'Laugh',
+            'icon' => '😆',
+        ]);
     }
 }
