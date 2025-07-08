@@ -1,4 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
 <style>
     .embed-bar {
         background: #fff;
@@ -122,9 +121,8 @@
                 @php
                     $count = $siteReactionCounts[$type->id] ?? 0;
                 @endphp
-                <form hx-target="#react-bar-embed" hx-swap="outerHTML"
-                    hx-post="{{ route('embed.react', ['slug' => $site->slug]) }}" class="reaction-form">
-                    @csrf
+                <form onsubmit="window.handleReactBarSubmit(event)"
+                    action="{{ route('embed.react', ['slug' => $site->slug]) }}" class="reaction-form">
                     <input type="hidden" name="reaction_type_id" value="{{ $type->id }}">
                     <button type="submit" class="reaction-button" aria-label="{{ $type->name }}">
                         <span class="reaction-icon">{{ $type->icon }}</span>
